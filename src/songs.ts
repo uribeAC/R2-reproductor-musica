@@ -59,7 +59,7 @@ export const getNextSongPosition = (
 ) => {
   let nextSongPosition: number;
 
-  if ((currentSongPosition = songs.length - 1)) {
+  if (currentSongPosition === songs.length - 1) {
     nextSongPosition = 0;
   } else {
     nextSongPosition = currentSongPosition + 1;
