@@ -1,9 +1,7 @@
 import { Song } from "./songsData";
 
 export const areSameSong = (song: Song, songTitle: string): boolean => {
-  let areSame: boolean;
-
-  areSame = song.title === songTitle;
+  const areSame: boolean = song.title === songTitle;
 
   return areSame;
 };
@@ -13,9 +11,8 @@ export const addSong = (song: Song, songs: Song[]): void => {
 };
 
 export const isPlaylistFull = (songs: Song[]): boolean => {
-  let isFull: boolean;
-
-  isFull = songs.length >= 4;
+  const maximumSongsNumber = 4;
+  const isFull: boolean = songs.length >= maximumSongsNumber;
 
   return isFull;
 };
@@ -38,9 +35,7 @@ export const getErrorMessage = (errorCode: string): string => {
 };
 
 export const getSongsCount = (songs: Song[]): number => {
-  let songsCount: number;
-
-  songsCount = songs.length;
+  const songsCount: number = songs.length;
 
   return songsCount;
 };
@@ -69,9 +64,7 @@ export const getNextSongPosition = (
 };
 
 export const isCurrentSong = (song: Song): boolean => {
-  let isCurrent: boolean;
-
-  isCurrent = song.isCurrent;
+  const isCurrent: boolean = song.isCurrent;
 
   return isCurrent;
 };
